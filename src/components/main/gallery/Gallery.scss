@@ -1,0 +1,154 @@
+.gallery {
+  background-color: #14110E;
+  padding: 50px 0;
+  color: #fff;
+
+  .gallery__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 50px;
+
+    .gallery__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 30%;
+
+      span {
+        color: #c99e71;
+        font-size: 22px;
+        font-weight: bold;
+        padding: 0 10px;
+      }
+
+      h3 {
+        font-size: 22px;
+        margin: 10px 0;
+      }
+
+      img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .gallery__bottom {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    .gallery__bottom-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 60%;
+
+      img {
+        width: 48%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+
+    .gallery__content {
+      width: 40%;
+      height: 420px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: left;
+      background: #1C1814;
+
+      .gallery__history {
+        color: #c99e71;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      h2 {
+        font-size: 36px;
+        font-weight: 700;
+        margin: 20px 0;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #ccc;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .gallery__top {
+      flex-direction: column;
+      .gallery__item {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+    .gallery__bottom {
+      flex-direction: column;
+
+      .gallery__bottom-images {
+        width: 100%;
+        img {
+          width: 48%;
+        }
+      }
+
+      .gallery__content {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .gallery__bottom-images img {
+      width: 100%;
+    }
+
+    .gallery__content h2 {
+      font-size: 28px;
+    }
+
+    .gallery__content p {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .gallery__top {
+      .gallery__item {
+        h3 {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .gallery__bottom {
+      .gallery__content {
+        h2 {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .gallery__bottom-images img {
+      width: 100%;
+    }
+  }
+}
